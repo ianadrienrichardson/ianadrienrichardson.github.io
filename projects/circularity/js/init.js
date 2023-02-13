@@ -55,9 +55,9 @@ var init = function (window) {
 
             // TODO 9 : Iterate over the array
            for (var i = 0; i < circles.length; i++) {
-            var eachValue = circles[i];
-            physiks.updatePosition(eachValue);
-            game.checkCirclePosition(eachValue);
+            var eachCircle = circles[i];
+            physiks.updatePosition(eachCircle);
+            game.checkCirclePosition(eachCircle);
            }
             
         }
@@ -75,19 +75,17 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            }
+            
             if (circle.x < 0) {
                 circle.x = canvas.width;
             }
-            if (circle.y > canvas.length) {
+            if (circle.y > canvas.height) {
                 circle.y = 0;
             }
             if (circle.y < 0){
-                circle.y = canvas.length;
+                circle.y = canvas.height;
             }
-            
-
-
+        }
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
         
